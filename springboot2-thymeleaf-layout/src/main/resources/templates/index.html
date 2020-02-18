@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" 
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/layout">
+<head>
+	<title>index :: spring-thymeleaf</title>
+</head>
+<body>
+	<!-- body -->
+	<div layout:fragment="content">
+		<div class="container-fluid" align="center">	<!-- main container -->
+			<h1 th:text="#{text.title}"></h1>
+			<p style="margin-top:100px;"><span th:text="${myModel.now}"></span>, <span th:text="${myModel.date}"></span></p>
+		</div> <!-- /main container -->	
+	</div>
+</body>
+</html>
